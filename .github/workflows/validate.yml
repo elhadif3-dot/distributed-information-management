@@ -1,0 +1,30 @@
+name: Validate Project Files
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate notebooks
+        run: |
+          python -m json.tool projects/project-1-tv-viewership-analytics/notebooks/part1_data_quality_and_enrichment.ipynb > /dev/null
+          python -m json.tool projects/project-1-tv-viewership-analytics/notebooks/part2_audience_analytics_queries.ipynb > /dev/null
+          python -m json.tool projects/project-2-household-clustering-streaming/notebooks/household_clustering_and_streaming.ipynb > /dev/null
+
+      - name: Compile extracted scripts
+        run: |
+          python -m py_compile projects/project-1-tv-viewership-analytics/src/part1_data_quality_and_enrichment.py
+          python -m py_compile projects/project-1-tv-viewership-analytics/src/part2_audience_analytics_queries.py
+          python -m py_compile projects/project-2-household-clustering-streaming/src/household_clustering_and_streaming.py
