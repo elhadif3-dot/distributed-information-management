@@ -1,8 +1,30 @@
+<div align="center">
+
+![Distributed Information Management Banner](https://capsule-render.vercel.app/api?type=waving&color=0:FF3621,50:7C3AED,100:00A6ED&height=175&section=header&text=Distributed%20Information%20Management&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=PySpark%20analytics%20%7C%20Spark%20ML%20%7C%20Kafka%20streaming%20%7C%20Databricks&descSize=15&descAlignY=60)
+
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PySpark](https://img.shields.io/badge/PySpark-Distributed%20Analytics-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-Notebook%20Workflows-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-Streaming-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+![CI](https://img.shields.io/badge/GitHub%20Actions-Validation-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+
+</div>
+
 # Distributed Information Management
 
 Portfolio repository for distributed data processing projects built with PySpark and Databricks.
 
-The current project analyzes large-scale TV set-top-box viewing data, demographic data, program metadata, and reference data. It focuses on distributed ETL, data quality, feature engineering, and analytical queries over multi-table datasets.
+This portfolio analyzes large-scale TV set-top-box viewing data, demographic data, program metadata, and reference data. It focuses on distributed ETL, data quality, feature engineering, Spark ML, and streaming analytics over multi-table datasets.
+
+## Recruiter Snapshot
+
+| Area | Evidence In This Repository |
+| --- | --- |
+| Distributed ETL | Schema-driven ingestion from CSV and Parquet sources |
+| Analytics | Multi-table joins, demographic segmentation, DMA and genre ranking |
+| Spark ML | Feature pipelines, PCA visualization, KMeans household clustering |
+| Streaming | Kafka ingestion with Spark Structured Streaming and micro-batch state |
+| Engineering maturity | Sanitized notebooks, extracted Python scripts, validation workflow |
 
 ## Projects
 
@@ -53,3 +75,9 @@ dbfs:/FileStore/project_b_data/
 ## Validation
 
 The GitHub workflow validates that notebooks are valid JSON and that the extracted Python scripts compile. Full execution requires the original Databricks data environment.
+
+<div align="center">
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:00A6ED,50:7C3AED,100:FF3621&height=95&section=footer)
+
+</div>
